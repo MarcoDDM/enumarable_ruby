@@ -1,67 +1,182 @@
-# Ruby Course
+<!-- TABLE OF CONTENTS -->
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
+# 📗 Table of Contents
 
-## Set-up Rubocop GitHub Action
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-[Rubocop](https://www.rubocop.org/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
+<!-- PROJECT DESCRIPTION -->
 
-This GitHub Action is going to run [Rubocop](https://docs.rubocop.org/en/stable/) to help you find style issues.
+# 📖 Enumerable <a name="about-project"></a>
 
-Please do the following **steps in this order**:
+The repository also includes a MyList class that utilizes the MyEnumerable module. The MyList class contains an instance variable @list, which holds the elements of the list. The class implements an #each method to iterate through the elements and yield successive members of @list using the methods defined in MyEnumerable.
 
-1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
-    - **Remember** to use the file linked above
-    - **Remember** that `.github` folder starts with a dot.
-2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-3. When you open your first pull request you should see the result of the GitHub Actions:
+## 🛠 Built With <a name="built-with"></a>
 
-![gh actions checks](../assets/images/gh-actions-rubocop-linters-checks.png)
+### Tech Stack <a name="tech-stack"></a>
 
-Click on the `Details` link to see the full output and the errors that need to be fixed:
+<details>
+<summary>Ruby</summary>
+  <ul>
+    <li><a href="https://www.Ruby.org/">Ruby</a></li>
+  </ul>
+</details>
 
-![gh actions failing checks](../assets/images/gh-actions-rubocop-failing-checks.png)
+<!-- Features -->
 
-## [OPTIONAL]Set-up RSpec GitHub Action
+### Key Features <a name="key-features"></a>
 
-You can run your tests with GitHub Actions to ensure that they are passing before merging a PR.
 
-To use the GitHub Action to run your tests, please do the following **steps in this order**:
 
-1. Add a copy of [`.github/workflows/tests.yml`](.github/workflows/tests.yml) to your `.github/workflows` folder.
-    - **Remember** to use the file linked above
-    - Do not modify or delete the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) file that should already be in that folder.
-    - RSpec by default will try to run any file ending in `_spec.rb` inside the `spec` folder. Make sure to follow this convention for your tests files so `rspec` can run your spec files.
-    - You can modify the [`.github/workflows/tests.yml`](.github/workflows/tests.yml) file to better fit your custom needs.
-3. When you open your pull request you should see the result of the GitHub Action:
+-[x] Use 'def ...' syntax to create a function
+-[x] Use 'puts ...' To insert an output
 
-![gh actions checks](../assets/images/gh-actions-rspec-tests-checks.png)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Click on the `Details` link of the test action to check the results of your tests.
+<!-- LIVE DEMO -->
+Not available yet
 
-## Set-up linters in your local env
+## 🚀 Live Demo <a name="live-demo"></a>
 
-### [RuboCop](https://docs.rubocop.org/en/stable/)
+Comming soon
 
-1. Add this line to the `Gemfile`
-    ```
-    gem 'rubocop', '>= 1.0', '< 2.0'
-    ```
-    *not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html).*
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-4. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-5. Run `rubocop`.
-6. Fix linter errors.
-7. **IMPORTANT NOTE**: feel free to research [auto-correct options for Rubocop](https://rubocop.readthedocs.io/en/latest/auto_correct/) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Troubleshooting
+<!-- GETTING STARTED -->
 
-- While using Colorize gem, if you are facing errors with Rspec related to 
-    ```bash
-    LoadError:
-    cannot load such file -- colorize
-    ```
-    please remove ```--deployment``` from line no. [26](https://github.com/shubham14p3/Ruby-capstone-project/blob/ca86784cc88bea7c933e329c0953f07e21bcf6ca/.github/workflows/tests.yml#L16) of test.yml file.
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites <a name="prerequisites"></a>
+- ✔ A professional editer such as [VS Code](https://code.visualstudio.com/download).
+- ✔ [Ruby](https://rubyinstaller.org/downloads/) installed in your machine.
+- ✔ [Git](https://git-scm.com/downloads) installed in your machine.
+- ✔ Sign in or sign up to your [Github](https://github.com/) account.
+
+### Setup
+
+To setup and install this project, follow the below steps:
+- Clone this project by the command: 
+
+```
+$ git clone https://github.com/MarcoDDM/decode_ruby.git
+```
+
+- Then switch to the project folder by the bellow query:
+
+```
+$ cd decode_ruby
+```
+
+### Install
+
+Install this project with:
+
+coming soon
+
+### Usage
+
+Coming soon
+
+### Run tests
+
+Coming soon
+
+### Deployment
+
+Coming soon
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+
+
+👤 **Author1**
+
+- GitHub: [francksefu](https://github.com/francksefu)
+- Twitter: [francksefu](https://twitter.com/franck_sefu)
+- LinkedIn: [francksefu](https://www.linkedin.com/in/franck-sefu/)
+
+👤 **Author2**
+
+- GitHub: [@MarcoDDM](https://github.com/MarcoDDM)
+- Twitter: [@twitterhandle](https://twitter.com/nerdpiola)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/marcoalmadaar)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+We will create the application (front end part)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+
+If you like this project, clone it to have it.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> Give credit to everyone who inspired your codebase.
+
+We would like to thank Microverse for all
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ <a name="faq"></a>
+
+Coming soon
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
